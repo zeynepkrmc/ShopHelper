@@ -3,13 +3,13 @@ ShopAgent, e-ticaret platformlarında kullanıcıların daha bilinçli alışver
 - Bu proje BTK Akademi Hackathon 2025 için geliştirilmektedir.
 # Temel Özellikler
 Çoklu Ajan Mimarisi:
-Ürün Keşif Ajanı: Kullanıcı sorgularına göre ilgili ürünleri bulur ve detaylarını sunar.
-Yorum Özetleme Ajanı: Belirli ürünler için müşteri yorumlarını özetleyerek hızlı bir genel bakış sağlar.
-Kişiselleştirilmiş Öneriler Ajanı: Kullanıcının amacına (bütçe odaklı, kalite odaklı vb.) göre özelleştirilmiş ürün önerileri sunar.
-İçerik Yazarı Ajanı: Ürünler için SEO uyumlu açıklamalar veya pazarlama metinleri oluşturur.
-Retrieval-Augmented Generation (RAG): Yapılandırılmış ürün ve yorum veri setleri (CSV) kullanılarak, LLM'lere bağlam sağlanır ve böylece daha doğru ve ilgili yanıtlar üretilir.
-Multi-Context Prompting (MCP): Kullanıcı amacını (örn. bütçe, kalite) LLM istemlerine dahil ederek ajan davranışının dinamik olarak uyarlanmasını sağlar.
-LLM Entegrasyonu: Doğal diyalog, dinamik açıklamalar ve ajanlar arası muhakeme için Google Gemini API (veya GPT-4 API uyumluluğu) kullanılır.
+- Ürün Keşif Ajanı: Kullanıcı sorgularına göre ilgili ürünleri bulur ve detaylarını sunar.
+- Yorum Özetleme Ajanı: Belirli ürünler için müşteri yorumlarını özetleyerek hızlı bir genel bakış sağlar.
+- Kişiselleştirilmiş Öneriler Ajanı: Kullanıcının amacına (bütçe odaklı, kalite odaklı vb.) göre özelleştirilmiş ürün önerileri sunar.
+- İçerik Yazarı Ajanı: Ürünler için SEO uyumlu açıklamalar veya pazarlama metinleri oluşturur.
+- Retrieval-Augmented Generation (RAG): Yapılandırılmış ürün ve yorum veri setleri (CSV) kullanılarak, LLM'lere bağlam sağlanır ve böylece daha doğru ve ilgili yanıtlar üretilir.
+- Multi-Context Prompting (MCP): Kullanıcı amacını (örn. bütçe, kalite) LLM istemlerine dahil ederek ajan davranışının dinamik olarak uyarlanmasını sağlar.
+- LLM Entegrasyonu: Doğal diyalog, dinamik açıklamalar ve ajanlar arası muhakeme için Google Gemini API (veya GPT-4 API uyumluluğu) kullanılır.
 
 # Mimari
 ShopAgent projesi, net bir sorumluluk ayrımı sağlayan katmanlı bir mimariye sahiptir:
