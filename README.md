@@ -30,25 +30,19 @@ Tailwind CSS: Hızlı ve modern UI tasarımı için CSS framework'ü.
 
 # Kurulum ve Çalıştırma
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
-
 Gerekli Kütüphaneleri Yükleyin:
 pip install Flask pandas google-generativeai flask-cors
-
 Gemini API Anahtarınızı Ayarlayın:
 Google AI Studio'dan bir Gemini API anahtarı alın ve bunu bir ortam değişkeni olarak ayarlayın.
-
 Windows (CMD):
 DOS
 set GEMINI_API_KEY=SİZİN_GERÇEK_API_ANAHTARINIZ
-
 Windows (PowerShell):
 PowerShell
 $env:GEMINI_API_KEY="SİZİN_GERÇEK_API_ANAHTARINIZ"
-
 Linux/macOS:
 Bash
 export GEMINI_API_KEY="SİZİN_GERÇEK_API_ANAHTARINIZ"
 Önemli: run_shopagent.bat dosyasını kullanıyorsanız, anahtarınızı doğrudan .bat dosyasının içine de yapıştırabilirsiniz (dosya içindeki talimatlara bakın).
-
 Flask Backend'i Başlatın:
 Terminalde: flask run komutunu yazabilirsiniz veya proje içeriğne göre bat dosyasına çift tıklanılarak açılabilir.
