@@ -13,11 +13,11 @@ LLM Entegrasyonu: Doğal diyalog, dinamik açıklamalar ve ajanlar arası muhake
 
 # Mimari
 ShopAgent projesi, net bir sorumluluk ayrımı sağlayan katmanlı bir mimariye sahiptir:
-Frontend (Kullanıcı Arayüzü): HTML ve JavaScript ile oluşturulmuş basit ve interaktif bir web arayüzü. Kullanıcı girişlerini alır ve backend API'sine istek gönderir.
-Backend (API ve Ajan Mantığı): Python ve Flask framework'ü kullanılarak geliştirilmiştir. Gelen HTTP isteklerini işler, ajanları koordine eder ve LLM'ler ile etkileşime girerek yanıtları oluşturur.
-Ajan Katmanı: Her biri belirli bir e-ticaret görevine odaklanmış ayrı Python sınıfları olarak tasarlanmış otonom ajanlar.
-Veri Katmanı: Ürün ve yorum bilgilerini içeren sahte CSV veri setleri (RAG için temel).
-LLM Entegrasyonu: google-generativeai kütüphanesi aracılığıyla Gemini API ile iletişim kurar.     
+- Frontend (Kullanıcı Arayüzü): HTML ve JavaScript ile oluşturulmuş basit ve interaktif bir web arayüzü. Kullanıcı girişlerini alır ve backend API'sine istek gönderir.
+- Backend (API ve Ajan Mantığı): Python ve Flask framework'ü kullanılarak geliştirilmiştir. Gelen HTTP isteklerini işler, ajanları koordine eder ve LLM'ler ile etkileşime girerek yanıtları oluşturur.
+- Ajan Katmanı: Her biri belirli bir e-ticaret görevine odaklanmış ayrı Python sınıfları olarak tasarlanmış otonom ajanlar.
+- Veri Katmanı: Ürün ve yorum bilgilerini içeren sahte CSV veri setleri (RAG için temel).
+- LLM Entegrasyonu: google-generativeai kütüphanesi aracılığıyla Gemini API ile iletişim kurar.     
                                                              
 # Kullanılan Teknolojiler
 Python: Backend mantığı ve ajan geliştirme için ana dil.
