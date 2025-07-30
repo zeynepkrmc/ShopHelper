@@ -19,7 +19,7 @@ Ajan Katmanı: Her biri belirli bir e-ticaret görevine odaklanmış ayrı Pytho
 Veri Katmanı: Ürün ve yorum bilgilerini içeren sahte CSV veri setleri (RAG için temel).
 LLM Entegrasyonu: google-generativeai kütüphanesi aracılığıyla Gemini API ile iletişim kurar.     
                                                              
-Kullanılan Teknolojiler
+# Kullanılan Teknolojiler
 Python: Backend mantığı ve ajan geliştirme için ana dil.
 Flask: Hafif ve esnek bir web framework'ü olarak backend API'sini oluşturmak için kullanılır.
 Pandas: CSV veri setlerini yüklemek ve işlemek için.
@@ -28,7 +28,7 @@ flask-cors: Çapraz kaynak isteklerini yönetmek için (frontend'in backend'e er
 HTML/CSS/JavaScript: Kullanıcı arayüzü için.
 Tailwind CSS: Hızlı ve modern UI tasarımı için CSS framework'ü.
 
-Kurulum ve Çalıştırma
+# Kurulum ve Çalıştırma
 Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
 Gerekli Kütüphaneleri Yükleyin:
