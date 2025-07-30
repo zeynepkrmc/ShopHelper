@@ -19,21 +19,21 @@ Ajan Katmanı: Her biri belirli bir e-ticaret görevine odaklanmış ayrı Pytho
 Veri Katmanı: Ürün ve yorum bilgilerini içeren sahte CSV veri setleri (RAG için temel).
 LLM Entegrasyonu: google-generativeai kütüphanesi aracılığıyla Gemini API ile iletişim kurar.
 
-+---------------------+      +---------------------+      +---------------------+
-| HTML/JS Frontend    | <--> | Flask Backend (API) | <--> | Python Agents       |
-| (index.html)        |      | (app.py)            |      | (product_agent.py,  |
-+---------------------+      +---------------------+      |  review_agent.py,   |
-                                       ^                  |  decision_agent.py, |
-                                       |                  |  writer_agent.py)   |
-                                       v                  +---------------------+
-                             +---------------------+                  ^
-                             | Gemini API          |                  |
-                             +---------------------+                  v
-                                                              +---------------------+
-                                                              | CSV Data (RAG)      |
-                                                              | (products.csv,      |
-                                                              |  reviews.csv)       |
-                                                              +---------------------+
++---------------------+      +---------------------+      
+| HTML/JS Frontend    | <--> | Flask Backend (API) | <-->  Python Agents       
+| (index.html)        |      | (app.py)            |       (product_agent.py,  
++---------------------+      +---------------------+        review_agent.py,   
+                                       ^                   decision_agent.py, 
+                                       |                    writer_agent.py)   
+                                       v                  
+                                                                       ^
+                                Gemini API                              |
+                                                                       v
+                                                              
+                                                               CSV Data (RAG)      
+                                                               (products.csv,      
+                                                                reviews.csv)       
+                                                             
 Kullanılan Teknolojiler
 Python: Backend mantığı ve ajan geliştirme için ana dil.
 Flask: Hafif ve esnek bir web framework'ü olarak backend API'sini oluşturmak için kullanılır.
