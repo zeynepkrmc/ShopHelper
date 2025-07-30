@@ -17,22 +17,7 @@ Frontend (Kullanıcı Arayüzü): HTML ve JavaScript ile oluşturulmuş basit ve
 Backend (API ve Ajan Mantığı): Python ve Flask framework'ü kullanılarak geliştirilmiştir. Gelen HTTP isteklerini işler, ajanları koordine eder ve LLM'ler ile etkileşime girerek yanıtları oluşturur.
 Ajan Katmanı: Her biri belirli bir e-ticaret görevine odaklanmış ayrı Python sınıfları olarak tasarlanmış otonom ajanlar.
 Veri Katmanı: Ürün ve yorum bilgilerini içeren sahte CSV veri setleri (RAG için temel).
-LLM Entegrasyonu: google-generativeai kütüphanesi aracılığıyla Gemini API ile iletişim kurar.
-
-+---------------------+      +---------------------+      
-| HTML/JS Frontend    | <--> | Flask Backend (API) | <-->  Python Agents       
-| (index.html)        |      | (app.py)            |       (product_agent.py,  
-+---------------------+      +---------------------+        review_agent.py,   
-                                       ^                   decision_agent.py, 
-                                       |                    writer_agent.py)   
-                                       v                  
-                                                                       ^
-                                Gemini API                              |
-                                                                       v
-                                                              
-                                                               CSV Data (RAG)      
-                                                               (products.csv,      
-                                                                reviews.csv)       
+LLM Entegrasyonu: google-generativeai kütüphanesi aracılığıyla Gemini API ile iletişim kurar.     
                                                              
 Kullanılan Teknolojiler
 Python: Backend mantığı ve ajan geliştirme için ana dil.
