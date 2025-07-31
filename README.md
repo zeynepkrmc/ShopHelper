@@ -1,5 +1,5 @@
 # ShopHelper
-ShopAgent veya ShopHelper (karar veremedim :) ), e-ticaret platformlarında kullanıcıların daha bilinçli alışveriş kararları vermelerine yardımcı olmak amacıyla geliştirilmiş, büyük dil modelleri (LLM'ler) ve akıllı istem stratejileri kullanan yenilikçi bir çoklu ajan sistemidir. Bu proje, kullanıcı sorgularına bağlama dayalı, kişiselleştirilmiş ve zengin yanıtlar sunarak geleneksel alışveriş deneyimini dönüştürmeyi hedeflemektedir.
+ShopAgent (veya ShopHelper karar veremedim :) ), e-ticaret platformlarında kullanıcıların daha bilinçli alışveriş kararları vermelerine yardımcı olmak amacıyla geliştirilmiş, büyük dil modelleri (LLM'ler) ve akıllı istem stratejileri kullanan yenilikçi bir çoklu ajan sistemidir. Bu proje, kullanıcı sorgularına bağlama dayalı, kişiselleştirilmiş ve zengin yanıtlar sunarak geleneksel alışveriş deneyimini dönüştürmeyi hedeflemektedir.
 - Bu proje BTK Akademi Hackathon 2025 için geliştirilmektedir.
 # Temel Özellikler
 Çoklu Ajan Mimarisi:
