@@ -11,7 +11,7 @@ ShopHelper, e-ticaret platformlarında kullanıcıların daha bilinçli alışve
 - İçerik Yazarı Ajanı: Ürünler için SEO uyumlu açıklamalar veya pazarlama metinleri oluşturur.
 - Retrieval-Augmented Generation (RAG): Yapılandırılmış ürün ve yorum veri setleri (CSV) kullanılarak, LLM'lere bağlam sağlanır ve böylece daha doğru ve ilgili yanıtlar üretilir.
 - Multi-Context Prompting (MCP): Kullanıcı amacını (örn. bütçe, kalite) LLM istemlerine dahil ederek ajan davranışının dinamik olarak uyarlanmasını sağlar.
-- LLM Entegrasyonu: Doğal diyalog, dinamik açıklamalar ve ajanlar arası muhakeme için Google Gemini API (veya GPT-4 API uyumluluğu) kullanılır.
+- LLM Entegrasyonu: Doğal diyalog, dinamik açıklamalar ve ajanlar arası muhakeme için Google Gemini API kullanılır.
 
 # Mimari
 - ShopAgent projesi, net bir sorumluluk ayrımı sağlayan katmanlı bir mimariye sahiptir:
