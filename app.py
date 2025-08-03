@@ -307,44 +307,93 @@ app = Flask(__name__)
 # CORS'u Flask sunucusunun kendi kaynağı için etkinleştirir.
 CORS(app, origins=["http://127.0.0.1:5000"])
 
-# --- Veri Yükleme ---
+# # --- Veri Yükleme ---
+# def load_data():
+#     """
+#     Ürün ve yorum verilerini yükler ve gerekli sütunların varlığını kontrol eder.
+#     """
+#     try:
+#         products_df = pd.read_csv('data/products.csv') # hata var!!!!!!!
+#         # Bu satır, pandas'ın dosyayı okurken hangi sütunları gördüğünü gösterecektir
+#         print(f"DEBUG: Yüklenen ürünler veri çerçevesi sütunları: {products_df.columns.tolist()}")
+#         print("DEBUG: products_df shape:", products_df.shape)
+#         print("DEBUG: İlk satırlar:\n", products_df.head())
+        
+#         print("Çalışma dizini:", os.getcwd())
+#         print("Dosya var mı:", os.path.exists("data/products.csv"))
+
+#         reviews_df = pd.read_csv('data/reviews.csv')
+        
+#         # Kritik sütunların varlığını kontrol edin
+#         required_product_columns = ['id', 'name', 'description', 'price', 'category', 'rating']
+#         for col in required_product_columns:
+#             if col not in products_df.columns:
+#                 raise ValueError(f"Hata: 'products.csv' dosyasında '{col}' sütunu bulunamadı. Lütfen dosyanın doğru sütun başlıklarına sahip olduğunuzdan emin olun.")
+        
+#         # reviews.csv için sütun adlarını güncelledim
+#         required_review_columns = ['productId', 'text']
+#         for col in required_review_columns:
+#             if col not in reviews_df.columns:
+#                 raise ValueError(f"Hata: 'reviews.csv' dosyasında '{col}' sütunu bulunamadı. Lütfen dosyanın doğru sütun başlıklarına sahip olduğunuzdan emin olun.")
+        
+#         print(f"DEBUG: products_df ilk 3 satır:\n{products_df.head(3)}")
+#         return products_df, reviews_df
+#     except FileNotFoundError as e:
+#         # Daha spesifik bir hata mesajı
+#         raise FileNotFoundError(f"Veri dosyaları bulunamadı: {e}. Lütfen 'data/products.csv' ve 'data/reviews.csv' dosyalarının mevcut olduğundan emin olun.")
+#     except Exception as e:
+#         raise Exception(f"Veri yüklenirken kritik bir hata oluştu: {e}")
+
+# try:
+#     products_df, reviews_df = load_data()
+# except Exception as e:
+#     print(f"UYARI: Uygulama başlatılırken veri yükleme hatası: {e}")
+#     products_df = pd.DataFrame()
+#     reviews_df = pd.DataFrame()
+
+
+import pandas as pd
+import os
+
 def load_data():
     """
     Ürün ve yorum verilerini yükler ve gerekli sütunların varlığını kontrol eder.
     """
     try:
-        products_df = pd.read_csv('data/products.csv')
-        # Bu satır, pandas'ın dosyayı okurken hangi sütunları gördüğünü gösterecektir
-        print(f"DEBUG: Yüklenen ürünler veri çerçevesi sütunları: {products_df.columns.tolist()}")
+        # CSV yolunu belirt
+        products_path = os.path.join("data", "products.csv")
+        reviews_path = os.path.join("data", "reviews.csv")
 
-        reviews_df = pd.read_csv('data/reviews.csv')
-        
-        # Kritik sütunların varlığını kontrol edin
-        required_product_columns = ['name', 'id', 'description', 'price', 'category', 'rating']
+        print(f"DEBUG: {products_path} yükleniyor...")
+        products_df = pd.read_csv(products_path)
+        print(f"DEBUG: products_df sütunları: {products_df.columns.tolist()}")
+        print(f"DEBUG: products_df satır sayısı: {len(products_df)}")
+
+        print(f"DEBUG: {reviews_path} yükleniyor...")
+        reviews_df = pd.read_csv(reviews_path)
+        print(f"DEBUG: reviews_df sütunları: {reviews_df.columns.tolist()}")
+        print(f"DEBUG: reviews_df satır sayısı: {len(reviews_df)}")
+
+        # Beklenen sütunları kontrol et
+        required_product_columns = ['id', 'name', 'description', 'price', 'category', 'rating']
         for col in required_product_columns:
             if col not in products_df.columns:
-                raise ValueError(f"Hata: 'products.csv' dosyasında '{col}' sütunu bulunamadı. Lütfen dosyanın doğru sütun başlıklarına sahip olduğunuzdan emin olun.")
-        
-        # reviews.csv için sütun adlarını güncelledim
+                raise ValueError(f"HATA: 'products.csv' içinde '{col}' sütunu eksik.")
+
         required_review_columns = ['productId', 'text']
         for col in required_review_columns:
             if col not in reviews_df.columns:
-                raise ValueError(f"Hata: 'reviews.csv' dosyasında '{col}' sütunu bulunamadı. Lütfen dosyanın doğru sütun başlıklarına sahip olduğunuzdan emin olun.")
-        
-        print(f"DEBUG: products_df ilk 3 satır:\n{products_df.head(3)}")
-        return products_df, reviews_df
-    except FileNotFoundError as e:
-        # Daha spesifik bir hata mesajı
-        raise FileNotFoundError(f"Veri dosyaları bulunamadı: {e}. Lütfen 'data/products.csv' ve 'data/reviews.csv' dosyalarının mevcut olduğundan emin olun.")
-    except Exception as e:
-        raise Exception(f"Veri yüklenirken kritik bir hata oluştu: {e}")
+                raise ValueError(f"HATA: 'reviews.csv' içinde '{col}' sütunu eksik.")
 
-try:
-    products_df, reviews_df = load_data()
-except Exception as e:
-    print(f"UYARI: Uygulama başlatılırken veri yükleme hatası: {e}")
-    products_df = pd.DataFrame()
-    reviews_df = pd.DataFrame()
+        return products_df, reviews_df
+
+    except FileNotFoundError as e:
+        print(f"[HATA] Dosya bulunamadı: {e}")
+        raise
+    except Exception as e:
+        print(f"[HATA] Veri yüklenirken genel bir hata oluştu: {e}")
+        raise
+products_df, reviews_df = load_data()
 
 # --- Gemini API ve Ajanları Başlatma ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
