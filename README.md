@@ -1,4 +1,3 @@
-[videolar.zip](https://github.com/user-attachments/files/21631040/videolar.zip)
 # ShopHelper
 ShopHelper – LLM Destekli Çoklu Ajan E-ticaret Asistanı
 ShopHelper, e-ticaret platformlarında kullanıcıların daha bilinçli alışveriş kararları vermelerine yardımcı olmak amacıyla geliştirilmiş, büyük dil modelleri (LLM'ler) ve akıllı istem stratejileri kullanan yenilikçi bir çoklu ajan sistemidir. Bu proje, kullanıcı sorgularına bağlama dayalı, kişiselleştirilmiş ve zengin yanıtlar sunarak geleneksel alışveriş deneyimini dönüştürmeyi hedeflemektedir.
