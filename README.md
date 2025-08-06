@@ -29,7 +29,8 @@ ShopHelper, e-ticaret platformlarında kullanıcıların daha bilinçli alışve
 - flask-cors: Çapraz kaynak isteklerini yönetmek için (frontend'in backend'e erişimi için).
 - HTML/CSS/JavaScript: Kullanıcı arayüzü için.
 - Tailwind CSS: Hızlı ve modern UI tasarımı için CSS framework'ü.
-
+# Proje Videosu
+[videolar.zip](https://github.com/user-attachments/files/21631040/videolar.zip)
 # Kurulum ve Çalıştırma
 - Depoyu klonlayın.
 - Gemini API Anahtarınızı Ayarlayın:
