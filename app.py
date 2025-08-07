@@ -510,9 +510,7 @@ def chat():
             else:
                 response_content = "Aradığınız ürünle ilgili bir şey bulamadım. Başka bir şey aramak ister misiniz?"
                 print("DEBUG: Ürün keşfi sonucu: Ürün bulunamadı.")
-                print(response_content.status_code) # dene
-                print(response_content.text)  # JSON mu, HTML mi?
-
+                
         print(f"DEBUG: Yanıt gönderiliyor. Ajan: {agent_type}, İçerik başlangıcı: {response_content[:50]}...")
         return jsonify({
             "role": "assistant",
